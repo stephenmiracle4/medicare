@@ -8,6 +8,7 @@ function Home() {
         
        <p className='text-red-600 text-3xl'> Home page</p>
        <p className='text-red-600 text-3xl'> Home page</p>
+       <p className='text-red-600 text-3xl'> Home page</p>
 
         
         </div>
