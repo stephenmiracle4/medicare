@@ -1,67 +1,77 @@
-import React from 'react'
-import '../Assets/css/Nav.css'
 
-function Nav() {
+
+import React, { useState } from 'react';
+
+const Navbar  = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Menu links array
+  const menuLinks = [
+    { name: 'Home', href: '#' },
+    { name: 'Services', href: '#services' },
+    { name: 'Department', href: '#department' },
+    { name: 'Contact', href: '#contact' },
+  ];
+
   return (
-    <div>
-        
-        <nav className="visible-sm visible-xs mobile-menu-container mobile-nav">
-    <div className="menu-mobile-nav navbar-toggle">
-        <span className="icon-bar"><i className="fa fa-bars" aria-hidden="true"></i></span>
-    </div>
-    <div id="cssmenu" className="animated">
-        <div className="uni-icons-close"><i className="fa fa-times" aria-hidden="true"></i></div>
-        <ul className="nav navbar-nav animated">
-            <li className="has-sub"><a href="#">Home</a>
-                <ul>
-                    <li><a href="index-2.html" className='text-red-600'>Home 1</a></li>
-                    <li><a href="01_02_home_2.html">Home 2</a></li>
-                    <li><a href="01_03_home_3.html">Home 3</a></li>
-                </ul>
-            </li>
-            <li className="has-sub"><a href='#'>Page</a>
-                <ul>
-                    <li><a href="02_01_about.html">About</a></li>
-                    <li className="has-sub"><a href="#">doctor</a>
-                        <ul>
-                            <li><a href="02_02_doctor.html">Doctors </a></li>
-                            <li><a href="02_03_doctor_details.html">Doctors Details</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="02_04_contact.html">Contact</a></li>
-                    <li><a href="02_05_gallery.html">Gallery</a></li>
-                </ul>
-            </li>
-            <li><a href="03_01_services.html">Services</a></li>
-            <li className="has-sub"><a href="#">Departments</a>
-                <ul>
-                    <li><a href="04_01_departments.html">Departments</a></li>
-                    <li><a href="04_02_single_department.html">Single Departments</a></li>
-                </ul>
-            </li>
-            <li className="has-sub"><a href='#'>Blog</a>
-                <ul>
-                    <li><a href="05_01_blog_list.html">Blog list</a></li>
-                    <li><a href="05_02_blog_grid.html">Blog Grid</a></li>
-                    <li><a href="05_03_single_post.html">Single post</a></li>
-                </ul>
-            </li>
-            <li className="has-sub"><a href='#'>shop</a>
-                <ul>
-                    <li><a href="06_01_shop.html">Shop</a></li>
-                    <li><a href="06_02_single_product.html">Single Product</a></li>
-                    <li><a href="06_03_cart.html">Cart</a></li>
-                    <li><a href="06_04_checkout.html">Checkout</a></li>
-                </ul>
-            </li>
-    
-            <li><a href="02_04_contact.html">Contact</a></li>
-        </ul>
-        <div className="clearfix"></div>
-    </div>
-</nav>
-    </div>
-  )
-}
+    <nav className="bg-white shadow-md">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+        {/* Logo */}
+        <div className="m-2"> <img src="/images/logo.png" alt="" /></div>
 
-export default Nav
+        {/* Desktop Menu */}
+        <div className="hidden md:flex space-x-6">
+          {menuLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.href}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          type="button"
+          className="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle Menu"
+        >
+          <svg
+            className="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-white border-t border-gray-200">
+          {menuLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.href}
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600"
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;
