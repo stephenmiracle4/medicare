@@ -10,7 +10,7 @@ const CardSection = () => {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac vestibulum turpis. Quisque eget nisl quis orci tincidunt suscipit non at lorem.',
     },
     {
-      icon: <FaAndroid className="text-4xl text-white" />,
+      icon: <FaAndroid className="text-4xl text-white" />, 
       title: '24 hours service',
       description:
         'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce id velit ac nisl fringilla tristique.',
