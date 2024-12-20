@@ -30,8 +30,10 @@ const BookApoinment = () => {
   ];
 
   return (
+    
     <div className="flex flex-wrap"
     >
+      <h3 className='w-full p-8 text-3xl'>BOOK APOINTMENT</h3>
       {apointment.map((apointment, index) => (
         <div key={index}
         
