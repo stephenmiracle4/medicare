@@ -8,7 +8,7 @@ const HeroSection = () => {
   const slides = [
     {
       image:  '/images/banner/background2.jpg',
-      message: 'Welcome to Our Website',
+      message: 'LET US PROTECT YOUR HEALTH',
     },
     {
       image:  '/images/banner/background1.jpg',
@@ -45,11 +45,19 @@ const HeroSection = () => {
           }}
         >
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div className="absolute inset-0 "></div>
 
           {/* Hero Message */}
           <div className="relative h-full flex items-center justify-center text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-bold">{slide.message}</h1>
+            <div className="p-8 bg-black bg-opacity-50">
+            <h1 className="text-4xl md:text-6xl font-bold ">{slide.message}</h1>
+            <p>
+              Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+              <br/>
+              Donec eu libero sit amet quam egestas semper.
+          </p>
+          <a href="#" className='bg-blue-500 p-4 text-3xl mt-4'>our services</a>
+            </div>
           </div>
         </div>
       ))}
