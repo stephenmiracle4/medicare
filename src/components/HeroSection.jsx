@@ -12,11 +12,11 @@ const HeroSection = () => {
     },
     {
       image:  '/images/banner/background1.jpg',
-      message: 'Discover Our Services',
+      message: 'LET US PROTECT YOUR HEALTH',
     },
     {
       image:  '/images/banner/background.jpg',
-      message: 'Contact Us Today',
+      message: 'LET US PROTECT YOUR HEALTH',
     },
   ];
 
@@ -49,14 +49,15 @@ const HeroSection = () => {
 
           {/* Hero Message */}
           <div className="relative h-full flex items-center justify-center text-center text-white">
-            <div className="p-8 bg-black bg-opacity-50">
-            <h1 className="text-4xl md:text-6xl font-bold ">{slide.message}</h1>
-            <p>
-              Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
-              <br/>
-              Donec eu libero sit amet quam egestas semper.
-          </p>
-          <a href="#" className='bg-blue-500 p-4 text-3xl mt-4'>our services</a>
+            <div className="p-4 py-8 flex flex-col justify-center  bg-black bg-opacity-50">
+              <h1 className="text-2 md:text-6xl font-bold ">{slide.message}</h1>
+              <p className='align-left'>
+                <br />
+                Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+                <br/>
+                Donec eu libero sit amet quam egestas semper.
+              </p>
+              <a href="#" className='text-center m-auto border-solid border-2 border-blue-500 px-6 py-4 text-3 mt-5 w-fit hover:bg-blue-500'>OUR SERVICES</a>
             </div>
           </div>
         </div>

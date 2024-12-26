@@ -6,20 +6,23 @@ const Navbar  = () => {
 
   // Menu links array
   const menuLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'Services', href: '#services' },
-    { name: 'Department', href: '#department' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'HOME', href: '#' },
+    { name: 'SERVICES', href: '#services' },
+    { name: 'DEPARTMENT', href: '#department' },
+    { name: 'BLOG', href: '#Blog' },
+    { name: 'APPOINTMENT', href: '#Appointment' },
+    { name: 'CONTACT', href: '#contact' },
   ];
 
   return (
     <nav className="bg-white shadow-md">
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-around">
         {/* Logo */}
         <div className="m-2"> <img src="/images/logo.png" alt="" /></div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6">
+     <div className="hidden md:flex space-x-8 items-center text-2x1">
+     <div className="hidden md:flex space-x-8 text-2x1 font-bold">
           {menuLinks.map((link, index) => (
             <a
               key={index}
@@ -27,9 +30,14 @@ const Navbar  = () => {
               className="text-gray-700 hover:text-blue-600"
             >
               {link.name}
+    
             </a>
+            
           ))}
         </div>
+        <a href="#" className='text-center m-auto border-solid border-2 border-blue-500 font-bold px-6 py-4 text-3 w-fit hover:bg-blue-500'>APPOINTMENT</a>
+
+     </div>
 
         {/* Mobile Menu Button */}
         <button
