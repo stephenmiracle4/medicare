@@ -1,5 +1,5 @@
 import React from 'react'
-import Services from '../components/Services'
+import CardGrid from '../components/Services'
 
 
 function ServiceSection() {
@@ -13,7 +13,7 @@ function ServiceSection() {
         <img src="images/services/underline1.png" alt="" />
         </div>
         <div>
-            <Services />
+            <CardGrid />
         </div>
     </div>
   )
