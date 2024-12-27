@@ -5,7 +5,7 @@ import ServiceSection from './ServiceSection'
 import CardSection from '../components/aboutCard'
 import BookApointmet from '../components/bookApointment'
 import PriceTable from './PriceTable'
-import FooterSection from './FooterSection'
+// import FooterSection from './FooterSection'
 
 function Home() {
   return (
@@ -16,7 +16,7 @@ function Home() {
         <ServiceSection/>
         <BookApointmet/>
         <PriceTable/>
-        <FooterSection/>
+        {/* <FooterSection/> */}
     </div>
   )
 }
