@@ -1,8 +1,9 @@
 import React from 'react'
 import { FaUser, FaPhone, FaEnvelope, FaCalendar, FaPen } from 'react-icons/fa'
+import '../Assets/css/bookApointment.css'
 
 
-const BookApoinment = () => {
+const BookApointment = () => {
   const apointment = [
     {
       icon: <FaUser className="text-4xl text-black" />,
@@ -30,10 +31,11 @@ const BookApoinment = () => {
   ];
 
   return (
+    <div> <h3 className='w-full p-8 text-3xl'>BOOK APOINTMENT</h3>
     
-    <div className="flex flex-wrap"
+    <div className=" book-apointment "
     >
-      <h3 className='w-full p-8 text-3xl'>BOOK APOINTMENT</h3>
+     
       {apointment.map((apointment, index) => (
         <div key={index}
         
@@ -49,9 +51,10 @@ const BookApoinment = () => {
       ))}
       <button>Book appointment</button>
     </div>
+    </div>
   )
 
 }
 
 
-export default BookApoinment
+export default BookApointment
