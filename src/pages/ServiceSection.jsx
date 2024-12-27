@@ -1,4 +1,5 @@
 import React from 'react'
+import CardGrid from '../components/Services'
 
 
 function ServiceSection() {
@@ -11,7 +12,9 @@ function ServiceSection() {
         <h1 className='text-3xl '>OUR SERVICE</h1>
         <img src="images/services/underline1.png" alt="" />
         </div>
-        <div></div>
+        <div>
+            <CardGrid />
+        </div>
     </div>
   )
 }
